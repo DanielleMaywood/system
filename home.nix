@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ pkgs, lib, ...}: {
   home = {
     stateVersion = "25.05";
 
@@ -63,15 +63,42 @@
         }
       '';
 
-      plugins = with pkgs.vimPlugins; [
+      plugins = let
+        fromGitHub = rev: ref: repo: pkgs.vimUtils.buildVimPlugin {
+          pname = "${lib.strings.sanitizeDerivationName repo}";
+          version = ref;
+          src = builtins.fetchGit {
+            url = "https://github.com/${repo}.git";
+            ref = ref;
+            rev = rev;
+          };
+        };
+      in with pkgs.vimPlugins; [
         vim-cool
+        {
+          plugin = (fromGitHub "079554c242a86be5d1a95598c7c6368d6eedd7a3" "main" "nuvic/flexoki-nvim");
+          type   = "lua";
+          config = ''
+            require("flexoki").setup { }
+
+            vim.cmd("colorscheme flexoki")
+          '';
+        }
+        {
+          plugin = lazygit-nvim;
+          type   = "lua";
+          config = ''
+            vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", {
+              desc = "Pick grep",
+            })
+          '';
+        }
         {
           plugin = nvim-treesitter.withAllGrammars;
           type   = "lua";
           config = ''
             require("nvim-treesitter.configs").setup {
               highlight = { enable = true },
-              indent    = { enable = true },
             }
           '';
         }
