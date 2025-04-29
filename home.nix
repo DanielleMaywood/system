@@ -107,12 +107,19 @@
           type   = "lua";
           config = ''
             vim.lsp.enable {
+              "rust_analyzer",
               "gleam",
               "nil_ls",
             }
           '';
           runtime = {
             "after/ftplugin/nix.lua".text = ''
+              vim.opt.tabstop     = 2
+              vim.opt.shiftwidth  = 2
+              vim.opt.softtabstop = 2
+              vim.opt.expandtab   = true
+            '';
+            "after/ftplugin/gleam.lua".text = ''
               vim.opt.tabstop     = 2
               vim.opt.shiftwidth  = 2
               vim.opt.softtabstop = 2
@@ -148,6 +155,39 @@
           config = ''
             require("mini.align").setup {
 
+            }
+          '';
+        }
+        {
+          plugin = mini-bracketed;
+          type   = "lua";
+          config = ''
+            require("mini.bracketed").setup {
+
+            }
+          '';
+        }
+        {
+          plugin = mini-clue;
+          type   = "lua";
+          config = ''
+            MiniClue = require("mini.clue")
+            MiniClue.setup {
+              triggers = {
+                -- Leader triggers
+                { mode = 'n', keys = '<Leader>' },
+                { mode = 'x', keys = '<Leader>' },
+
+                -- Built-in completion
+                { mode = 'i', keys = '<C-x>' },
+
+                -- 'g' key
+                { mode = 'n', keys = 'g' },
+                { mode = 'x', keys = 'g' },
+              },
+              window = {
+                delay = 0,
+              },
             }
           '';
         }
