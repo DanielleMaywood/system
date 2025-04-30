@@ -90,7 +90,7 @@
           type   = "lua";
           config = ''
             vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", {
-              desc = "Pick grep",
+              desc = "Open lazy git",
             })
           '';
         }
