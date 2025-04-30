@@ -205,7 +205,7 @@
           type   = "lua";
           config = ''
             require("mini.completion").setup {
-
+              fallback_action = "",
             }
           '';
         }
