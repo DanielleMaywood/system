@@ -95,6 +95,19 @@
           '';
         }
         {
+          plugin = neogit;
+          type   = "lua";
+          config = ''
+            require("neogit").setup {
+
+            }
+
+            vim.keymap.set("n", "<leader>gn", ":Neogit<CR>", {
+              desc = "Open neogit",
+            })
+          '';
+        }
+        {
           plugin = nvim-treesitter.withAllGrammars;
           type   = "lua";
           config = ''
