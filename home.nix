@@ -139,6 +139,10 @@
               vim.opt.softtabstop = 2
               vim.opt.expandtab   = true
             '';
+            "after/ftplugin/go.lua".text = ''
+              vim.opt.tabstop     = 4
+              vim.opt.shiftwidth  = 4
+            '';
           };
         }
         {
