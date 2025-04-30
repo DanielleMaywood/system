@@ -55,6 +55,7 @@
         vim.g.mapleader = " "
 
         vim.opt.number = true
+        vim.opt.wrap   = false
 
         vim.diagnostic.config {
           virtual_lines = {
