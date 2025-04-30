@@ -15,6 +15,7 @@
       pkgs.nil
       pkgs.ripgrep
       pkgs.tealdeer
+      pkgs.xh
     ];
   };
 
