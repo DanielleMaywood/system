@@ -123,6 +123,19 @@
               "gleam",
               "nil_ls",
             }
+
+            vim.api.nvim_create_autocmd("LspAttach", {
+              callback = function(args)
+                local opts = {
+                  buffer  = args.buffer,
+                  noremap = true,
+                  silent  = true,
+                }
+
+                vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+                vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+              end,
+            })
           '';
           runtime = {
             "after/ftplugin/nix.lua".text = ''
