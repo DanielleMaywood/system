@@ -154,6 +154,22 @@
               vim.opt.tabstop     = 4
               vim.opt.shiftwidth  = 4
             '';
+            "after/ftplugin/make.lua".text = ''
+              vim.opt.tabstop     = 4
+              vim.opt.shiftwidth  = 4
+            '';
+            "after/ftplugin/html.lua".text = ''
+              vim.opt.tabstop     = 4
+              vim.opt.shiftwidth  = 4
+              vim.opt.softtabstop = 4
+              vim.opt.expandtab   = true
+            '';
+            "after/ftplugin/htmldjango.lua".text = ''
+              vim.opt.tabstop     = 4
+              vim.opt.shiftwidth  = 4
+              vim.opt.softtabstop = 4
+              vim.opt.expandtab   = true
+            '';
           };
         }
         {
