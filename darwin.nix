@@ -12,10 +12,11 @@
       "discord"
       "font-maple-mono"
       "ghostty"
-      "rectangle"
       "orbstack"
+      "rectangle"
       "spotify"
       "tailscale"
+      "whatsapp"
       "zed@preview"
     ];
   };
