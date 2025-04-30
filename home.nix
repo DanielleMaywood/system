@@ -55,9 +55,6 @@
       extraLuaConfig = ''
         vim.g.mapleader = " "
 
-        vim.opt.number = true
-        vim.opt.wrap   = false
-
         vim.diagnostic.config {
           virtual_lines = {
             current_line = true,
@@ -173,6 +170,15 @@
           type   = "lua";
           config = ''
             require("mini.align").setup {
+
+            }
+          '';
+        }
+        {
+          plugin = mini-basics;
+          type   = "lua";
+          config = ''
+            require("mini.basics").setup {
 
             }
           '';
