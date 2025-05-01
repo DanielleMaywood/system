@@ -119,9 +119,11 @@
           type   = "lua";
           config = ''
             vim.lsp.enable {
-              "rust_analyzer",
+              "cssls",
               "gleam",
+              "html",
               "nil_ls",
+              "rust_analyzer",
             }
 
             vim.api.nvim_create_autocmd("LspAttach", {
@@ -165,6 +167,12 @@
               vim.opt.expandtab   = true
             '';
             "after/ftplugin/htmldjango.lua".text = ''
+              vim.opt.tabstop     = 4
+              vim.opt.shiftwidth  = 4
+              vim.opt.softtabstop = 4
+              vim.opt.expandtab   = true
+            '';
+            "after/ftplugin/css.lua".text = ''
               vim.opt.tabstop     = 4
               vim.opt.shiftwidth  = 4
               vim.opt.softtabstop = 4
