@@ -10,6 +10,8 @@
       "1password"
       "betterdisplay"
       "discord"
+      "eloston-chromium"
+      "firefox@developer-edition"
       "font-maple-mono"
       "ghostty"
       "orbstack"
