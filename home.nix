@@ -136,6 +136,7 @@
 
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
                 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+                vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, opts)
               end,
             })
           '';
