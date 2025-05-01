@@ -181,6 +181,18 @@
           };
         }
         {
+          plugin = toggleterm-nvim;
+          type   = "lua";
+          config = ''
+            require("toggleterm").setup {
+
+            }
+
+            vim.keymap.set("n", "<leader>t", "<CMD>ToggleTerm cmd='fish'<CR>", { desc = "Open terminal" })
+            vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
+          '';
+        }
+        {
           plugin = oil-nvim;
           type   = "lua";
           config = ''
