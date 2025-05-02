@@ -4,6 +4,7 @@
 
     file = {
       ".zshrc".source                 = ./dotfiles/.zshrc;
+      ".bashrc".source                = ./dotfiles/.bashrc;
       ".config/ghostty/config".source = ./dotfiles/.config/ghostty/config;
     };
 
