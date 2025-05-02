@@ -24,7 +24,6 @@
 
   outputs = {
     nix-darwin,
-    nixpkgs,
     lix-module,
     nix-homebrew,
     home-manager,
