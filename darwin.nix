@@ -18,6 +18,7 @@
       "firefox@developer-edition"
       "font-maple-mono"
       "ghostty"
+      "obs"
       "orbstack"
       "rectangle"
       "spotify"
