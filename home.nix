@@ -13,6 +13,7 @@
       pkgs.eza
       pkgs.fd
       pkgs.lazygit
+      pkgs.mas
       pkgs.nil
       pkgs.ripgrep
       pkgs.tealdeer
