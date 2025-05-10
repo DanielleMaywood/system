@@ -1,6 +1,7 @@
 theme = light:flexoki-light,dark:flexoki-dark
 
 font-size    = 16
+font-family  = Maple Mono
 font-feature = +cv02,+cv03
 
 cursor-style       = block
