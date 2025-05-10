@@ -123,6 +123,7 @@
               "cssls",
               "gleam",
               "html",
+              "jsonls",
               "nil_ls",
               "rust_analyzer",
             }
@@ -175,6 +176,12 @@
               vim.opt.expandtab   = true
             '';
             "after/ftplugin/css.lua".text = ''
+              vim.opt.tabstop     = 4
+              vim.opt.shiftwidth  = 4
+              vim.opt.softtabstop = 4
+              vim.opt.expandtab   = true
+            '';
+            "after/ftplugin/json.lua".text = ''
               vim.opt.tabstop     = 4
               vim.opt.shiftwidth  = 4
               vim.opt.softtabstop = 4
