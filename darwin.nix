@@ -27,6 +27,10 @@
       "whatsapp"
       "zed@preview"
     ];
+
+    masApps = {
+      "1Password for Safari" = 1569813296;
+    };
   };
 
   # Necessary for using flakes on this system.
