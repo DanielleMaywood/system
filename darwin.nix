@@ -30,6 +30,7 @@
 
     masApps = {
       "1Password for Safari" = 1569813296;
+      "Cascadea"             = 1432182561;
     };
   };
 
